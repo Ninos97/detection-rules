@@ -15,7 +15,7 @@ activeUsersO
 | where isnotempty(user);
 ```
 # Logic Behind the Rule
-This detection rule cross-references activities from **OfficeActivity** logs (generated in the cloud) with **DeviceNetworkEvents** logs (sent from endpoints to Microsoft Defender for Endpoint, MDE).
+This detection rule cross-references activities from **OfficeActivity** logs (generated in the cloud) with **DeviceNetworkEvents** logs sent from endpoints (Microsoft Defender for Endpoint).
 
 ## Key Points:
 
