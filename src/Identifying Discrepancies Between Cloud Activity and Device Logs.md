@@ -52,9 +52,7 @@ This rule flags users who have performed actions in the cloud from managed devic
   If users do not perform actions that generate OfficeActivity logs (e.g., using SharePoint, OneDrive, Teams, Exchange), the query will not trigger, even if Defender is down.
   
 **False Positives:**
-  Managed but non-onboarded devices (e.g., corporate-issued iPhones) may cause false positives.
-  
-  Mitigation: Create a watchlist of all managed but non-onboarded devices and exclude their activities from the query.
+  Managed but non-onboarded devices (e.g., corporate-issued iPhones) may cause false positives. **Mitigation**: Create a watchlist of all managed but non-onboarded devices and exclude their activities from the query.
   
 **Ingestion Delays:**
   Differences in ingestion times between OfficeActivity and DeviceNetworkEvents may temporarily cause discrepancies.
@@ -66,9 +64,7 @@ When the rule triggers, follow these steps to investigate:
   Determine if there are prior logs for the flagged device. If so, ingestion delays might be the issue.
   
 **Identify the Device Type:**
-  Use the UserAgent field in OfficeActivity logs and cross-reference with device information in Entra ID.
-  
-  Verify whether the flagged device is a corporate-issued iPhone or another non-onboarded device.
+Use the UserAgent field in OfficeActivity logs and cross-reference with device information in Entra ID. Verify whether the flagged device is a corporate-issued iPhone or another non-onboarded device.
   
 **Analyze Common Factors:**
   If multiple results are flagged, look for patterns or commonalities among the devices or users.
